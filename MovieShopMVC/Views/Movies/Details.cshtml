@@ -1,0 +1,84 @@
+﻿@model ApplicationCore.Models.MovieDetailsModel
+@{
+    ViewData["Title"] = @Model.Title;
+}
+
+
+<div class="container1 d-flex" style="background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),url(@Model.PosterUrl);background-repeat: no-repeat; background-position: center; background-size: cover;min-height:200px;backdrop-filter: blur(2px); justify-content:space-between; padding-left: 10%; gap:10%;">
+    <img src=@Model.PosterUrl style="flex:2; height:100%;"/>
+    <div class="content" style="flex:4;margin-top:1em;">
+        <h2 class="text-light">@Model.Title</h2>
+        <p style="color:#C0C0C0;">@Model.Tagline</p>
+        <div class="line d-flex" style="justify-content:space-between;padding-right:10%;">
+            <p style="color:#C0C0C0;"><strong>@Model.RunTime m |  @Model.ReleaseDate.Value.Year</strong></p>
+            @*@Model.ReleaseDate.ToString().Substring(6,4)*@
+            <div class="genres d-flex gap-1">
+                @foreach (var genre in @Model.Genres)
+                {
+                <p style="font-size:10px;color:white; background-color:grey;border-radius: 10px; padding:2px;text-align:center;">@genre.Name</p>
+                }                
+            </div>
+        </div>
+        <p class="rounded border border-success bg-success text-light p-1" style="width:3em;"><strong>10.0</strong></p>
+        <p class="text-light">@Model.Overview</p>
+    </div>
+    <div style="flex:2;padding-top:2em; padding-right:1em;">
+        <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true" style="width:100%; margin-bottom:2em;"><i class="fa fa-edit"></i>REVIEW</a>
+        <a href="#" class="btn btn-outline-light" role="button" aria-pressed="true" style="width:100%;">BUY  $@Model.Price</a>
+    </div>
+    
+</div>
+
+<div class="container2 d-flex" style="margin-top:1em; justify-content: flex-start; gap:20%;">
+    <div class="left" style="flex:2;">
+        <h2>MOVIE FACTS</h2>
+        <ul class="list-group list-group-flush" style="margin:2em 0;">
+            <li class="list-group-item d-flex" style="align-content:center; gap:1em;">
+                <p><i class="fa fa-calendar"></i> Release Date</p>
+                <p style="font-size:10px;color:white; background-color:grey;border-radius: 10px; padding:2px;text-align:center;"><strong>@Model.ReleaseDate.Value.ToString("MMM") @Model.ReleaseDate.Value.Day, @Model.ReleaseDate.Value.Year</strong></p>
+            </li>
+            <li class="list-group-item d-flex" style="align-content:center; gap:1em;">
+                <p><i class="fa fa-hourglass"></i> Run Time</p>
+                <p style="font-size:10px;color:white; background-color:grey;border-radius: 10px; padding:2px;text-align:center;"><strong>@Model.RunTime m</strong></p>
+            </li>
+            <li class="list-group-item d-flex" style="align-content:center; gap:1em;">
+                <p><i class="fa fa-money"></i> Box Office</p>
+                <p style="font-size:10px;color:white; background-color:grey;border-radius: 10px; padding:2px;text-align:center;"><strong>$@Model.Revenue.Value.ToString("#,##0.00")</strong></p>
+            </li>
+            <li class="list-group-item d-flex" style="align-content:center; gap:1em;">
+                <p><i class="fa fa-dollar"></i> Budget</p>
+                <p style="font-size:10px;color:white; background-color:grey;border-radius: 10px; padding:2px;text-align:center;"><strong>$@Model.Budget.Value.ToString("#,##0.00")</strong></p>
+            </li>
+            <li class="list-group-item d-flex" style="align-content:center; gap:1em;">
+                <p><i class="fa fa-credit-card"></i></p>
+                <p><i class="fa fa-mail-forward"></i></p>
+            </li>
+        </ul>
+        <h2>TRAILERS</h2>
+        <ul class="list-group list-group-flush" style="margin:2em 0;">
+            @foreach (var trailer in @Model.Trailers)
+            {
+            <li class="list-group-item" style="align-content:center;">
+                <a href=@trailer.TrailerUrl style="text-decoration:none; color:black;">
+                    <i class="fa fa-youtube-play" style="margin-right: 1em;"></i>@trailer.Name
+                </a>
+            </li>
+            }       
+        </ul>        
+    </div>
+    <div class="right" style="flex:3; width:100%">
+        <h2 style="margin-bottom:2em;">CASTS</h2>
+        <table class="table">
+            <tbody>
+                @foreach (var cast in @Model.Casts)
+                {
+                    <tr>
+                        <td><img src=@cast.ProfilePath alt=@cast.Name style="max-height:3em;" class="rounded-circle"/></td>
+                        <td>@cast.Character</td>
+                        <td>@cast.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

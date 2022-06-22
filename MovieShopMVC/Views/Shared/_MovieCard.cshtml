@@ -1,0 +1,7 @@
+﻿@*Movie Card Partial View will be used across multiple views in our application*@
+
+@model ApplicationCore.Models.MovieCardModel
+
+<a asp-controller="Movies" asp-action="Details" asp-route-id="@Model.Id">
+    <img src="@Model.PosterUrl" class="img-fluid"  alt="@Model.Title" />
+</a>
