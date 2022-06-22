@@ -2283,11 +2283,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
+      "projectUniqueName": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
       "projectName": "MovieShopMVC",
-      "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
+      "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
       "packagesPath": "C:\\Users\\Gaoming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\MovieShopMVC\\obj\\",
+      "outputPath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gaoming\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2304,11 +2304,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

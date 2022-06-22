@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W6HdyMXPyWsMAcqvvXKusqGuxZEYjtJQT+scMabg0yzLBxkHPaqKRt1r6KcSb+om+uySVNMWHEcGyeowkzpPZg==",
+  "dgSpecHash": "vqCBKg2HLGPqbIChpo8tEJtRMgRQLi+k4n9ukrFlW1XB48e5LGinPhYU2hXdnRUS5B8cPwBkYU8QvLmsn2pD2Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
+  "projectFilePath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gaoming\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Gaoming\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

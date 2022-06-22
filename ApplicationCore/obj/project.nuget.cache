@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sHsy14tAZtkO6544/W4BPTDvOJNWMh5LYoQ7zlFcDnMj0PFWrxbrwxQFnGPSnvDJ8y7pC9Zw9+bD4ji/9eZ/Dg==",
+  "dgSpecHash": "cpnSjvhd2LUPeo7NgmsqJJx7gpg7FNRJwm9V3na1k3hP0M7YlVYRYq7sw+BT7agLSE0nANZxzQwyMV8Mwh/vWQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gaoming\\PersonalProjects\\Antra_Learning\\asp\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gaoming\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.6\\microsoft.entityframeworkcore.6.0.6.nupkg.sha512",
     "C:\\Users\\Gaoming\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.6\\microsoft.entityframeworkcore.abstractions.6.0.6.nupkg.sha512",
