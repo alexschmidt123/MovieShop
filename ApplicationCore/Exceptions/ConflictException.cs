@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ApplicationCore.Exceptions
 {
-    internal class ConflictException
+    public class ConflictException:Exception
     {
+        public ConflictException(string message) : base(message)
+        {
+
+        }
     }
 }
