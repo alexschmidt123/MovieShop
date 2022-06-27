@@ -10,7 +10,22 @@ namespace Infrastructure.Services
 {
     public class MovieTestService : IMovieService
     {
+        public Task<List<MovieCardModel>> Genre(int genreId, int pageSize, int pageNumber)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PagedResultSetModel<MovieCardModel>> GetMovieByGenre(int genreId, int pageSize = 30, int pageNumber = 1)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<MovieDetailsModel> GetMovieDetails(int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<PagedResultSetModel<MovieCardModel>> GetMoviesByGenre(int genreId, int pageSize = 30, int pageNumber = 1)
         {
             throw new NotImplementedException();
         }
@@ -27,10 +42,6 @@ namespace Infrastructure.Services
             };
             return movies;
         }
-
-        public Task<List<MovieCardModel>> PaginatedResultSet(int id, int pageSize, int pageNumber)
-        {
-            throw new NotImplementedException();
-        }
     }
+  
 }

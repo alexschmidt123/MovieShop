@@ -1,4 +1,4 @@
-using ApplicationCore.Contracts.Respositories;
+using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Contracts.Services;
 using ApplicationCore.Entities;
 using Infrastructure.Data;
@@ -6,6 +6,7 @@ using Infrastructure.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
+using MovieShopMVC.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +21,13 @@ builder.Services.AddScoped<IRepository<Genre>, Repository<Genre>>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICurrentLogedInUser, CurrentLogedInUser>();
 //To implemenmt MovieTestService:
 //builder.Services.AddScoped<IMovieService, MovieTestService>();
+
+
+// Inject HttpContext for IHttpContextAccessor interface
+builder.Services.AddHttpContextAccessor();
 
 //Inject the connection string into DbContext options constructor
 //get the conncetion string from app settings

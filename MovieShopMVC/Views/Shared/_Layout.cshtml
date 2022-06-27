@@ -26,29 +26,14 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link text-muted dropdown-toggle" href="#" id="dropdownMenuButton1"
                                 data-bs-toggle="dropdown">GENRES</a>
-                            <div class="dropdown-menu"> @await Component.InvokeAsync("Genres")
+                            <div class="dropdown-menu"> 
+                                @await Component.InvokeAsync("Genres")
                             </div>
                         </li>
                     </ul>
+                    <partial name="_LoginInfo"/>
                 </div> 
-                 <div class="dropdown">
-                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown">Admin</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item text-dark" href="#">Top Movies</a>
-                        <a class="dropdown-item text-dark" href="#">Create Movie</a>
-                    </div>
-                </div>
-                <div class="dropdown">
-                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dropdownMenuButton1"
-                        data-bs-toggle="dropdown">UserName</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item text-dark" href="#">Movies <i class="fa fa-film"></i></a>
-                        <a class="dropdown-item text-dark" href="#">Favorite <i class="fa fa-star"></i></a>
-                        <a class="dropdown-item text-dark" href="#">Account <i class="fa fa-user-circle"></i></a>
-                        <a class="dropdown-item text-dark" href="#">Log Out <i class="fa fa-sign-out"></i></a>
-                    </div>
-                </div>
+                 
             </div>
         </nav>
     </header>
@@ -57,7 +42,7 @@
             @RenderBody()
         </main>
     </div>
-
+    
     <footer class="border-top footer text-muted">
         <div class="container">
             &copy; 2022 - MovieShop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>

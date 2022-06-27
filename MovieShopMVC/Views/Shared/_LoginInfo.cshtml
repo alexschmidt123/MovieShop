@@ -1,0 +1,57 @@
+﻿@using MovieShopMVC.Services
+
+
+@inject ICurrentLogedInUser currentUser
+
+@if (currentUser.IsAuthenticated)
+{
+    @* Hide login and Register button if user is Authenticated and show USer;s Full Name, Email and links
+        for Logout and VIew Profile Pages *@
+
+        <div class="text-end" >
+            <ul class="nav">
+                <li class="nav-item dropdown text-capitalize"> 
+                    <a class="nav-link dropdown-toggle" href="#" role="button" id="dropDownProfile" data-bs-toggle="dropdown"> 
+                        @currentUser.FullName
+                        @*@currentUser.UserId*@
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Purchases">Movies <i class="fa fa-film"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Favorites">Favorite <i class="fa fa-star"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Profile">Account <i class="fa fa-user-circle"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Logout">Log Out <i class="fa fa-sign-out"></i></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+	@*<div class="dropdown">
+                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown">Admin</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item text-dark" href="#">Top Movies</a>
+                        <a class="dropdown-item text-dark" href="#">Create Movie</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="nav-link text-muted dropdown-toggle" href="#" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown">@currentUser.FullName</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Purchases">Movies <i class="fa fa-film"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Favorites">Favorite <i class="fa fa-star"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Profile">Account <i class="fa fa-user-circle"></i></a>
+                        <a class="dropdown-item text-dark" asp-controller="User" asp-action="Logout">Log Out <i class="fa fa-sign-out"></i></a>
+                    </div>
+                </div>*@
+}
+else
+{
+     @* Show Login and Register buttons if User is not Authenticated
+     use this partial view inside the layout Page*@
+     
+     <div class="text-end">
+        <a class="btn btn-outline-light me-2" asp-controller="Account" asp-action="Login" > Login </a>
+        <a class="btn btn-outline-light me-2" asp-controller="Account" asp-action="Register" > Register </a>
+     </div>
+}
+

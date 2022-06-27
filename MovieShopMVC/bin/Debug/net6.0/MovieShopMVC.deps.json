@@ -10,10 +10,12 @@
         "dependencies": {
           "ApplicationCore": "1.0.0",
           "Infrastructure": "1.0.0",
+          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "6.0.6",
           "Microsoft.EntityFrameworkCore.Design": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.6",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6",
+          "System.Security.Cryptography.Cng": "5.0.0"
         },
         "runtime": {
           "MovieShopMVC.dll": {}
