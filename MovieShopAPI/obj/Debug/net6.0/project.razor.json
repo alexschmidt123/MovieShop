@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\MovieShopMVC.csproj",
+  "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopAPI\\MovieShopAPI.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -14245,23 +14245,6 @@
         }
       },
       {
-        "HashCode": 790421594,
-        "Kind": "MVC.ViewComponent",
-        "Name": "__Generated__GenresViewComponentTagHelper",
-        "AssemblyName": "MovieShopMVC",
-        "CaseSensitive": false,
-        "TagMatchingRules": [
-          {
-            "TagName": "vc:genres"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "ITagHelper",
-          "Common.TypeName": "__Generated__GenresViewComponentTagHelper",
-          "MVC.ViewComponent.Name": "Genres"
-        }
-      },
-      {
         "HashCode": -408310812,
         "Kind": "Components.Bind",
         "Name": "Bind",
@@ -16312,83 +16295,7 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "MovieShopMVC",
-  "Documents": [
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Account\\Register.cshtml",
-      "TargetPath": "Views\\Account\\Register.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\_LoginInfo.cshtml",
-      "TargetPath": "Views\\Shared\\_LoginInfo.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\_MovieCard.cshtml",
-      "TargetPath": "Views\\Shared\\_MovieCard.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\Components\\Genres\\Default.cshtml",
-      "TargetPath": "Views\\Shared\\Components\\Genres\\Default.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Home\\TopRatedMovies.cshtml",
-      "TargetPath": "Views\\Home\\TopRatedMovies.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Movies\\Details.cshtml",
-      "TargetPath": "Views\\Movies\\Details.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Account\\Login.cshtml",
-      "TargetPath": "Views\\Account\\Login.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Home\\Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Movies\\PagedMovies.cshtml",
-      "TargetPath": "Views\\Movies\\PagedMovies.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\Gaoming\\PersonalProjects\\MovieShop\\MovieShopMVC\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    }
-  ],
+  "RootNamespace": "MovieShopAPI",
+  "Documents": [],
   "SerializationFormat": "0.2"
 }
