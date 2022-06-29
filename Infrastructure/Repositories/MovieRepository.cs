@@ -20,11 +20,17 @@ namespace Infrastructure.Repositories
         public async Task<IEnumerable<Movie>> Get30HighestGrossingMovies()
         {
 
-            // LINQ code to get top 30 grossing movies
+            // LINQ code to get top 30 grossing movies 
             // select top 30 * from Movie order by Revenue
             // I/O bound operation
             //await
             var movies = await _dbContext.Movies.OrderByDescending(m => m.Revenue).Take(30).ToListAsync();
+            return movies;
+        }
+
+        public async Task<IEnumerable<Movie>> GetAllMovies()
+        {
+            var movies = await _dbContext.Movies.ToListAsync();
             return movies;
         }
 

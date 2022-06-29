@@ -4,69 +4,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ApplicationCore.Contracts.Services;
+using ApplicationCore.Models;
 
 namespace Infrastructure.Services
 {
     public class UserService : IUserService
     {
-        //public PurchaseMovie(PurchaseRequestModel purchaseRequest, int userId)
-        //{
+        public Task AddFavorite(FavoriteRequestModel favoriteRequest)
+        {
+            throw new NotImplementedException();
+        }
 
-        //}
+        public Task AddMovieReview(ReviewRequestModel reviewRequest)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public IsMoviePurchased(PurchaseRequestModel purchaseRequest, int userId)
-        //{
+        public Task DeleteMovieReview(int userId, int movieId)
+        {
+            throw new NotImplementedException();
+        }
 
-        //}
+        public Task<bool> FavoriteExists(int id, int movieId)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public GetAllPurchasesForUser(int id)
-        //{
+        public Task<List<MovieCardModel>> GetAllPurchasesForUser(int id)
+        {
+            throw new NotImplementedException();
+        }
 
-        //}
+        public Task<List<ReviewModel>> GetAllReviewsByUser(int id)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public GetPurchasesDetails(int userId, int movieId)
-        //{
+        public Task<List<MovieDetailsModel>> GetPurchasesDetails(int userId, int movieId)
+        {
+            throw new NotImplementedException();
+        }
 
-        //}
+        public Task<bool> IsMoviePurchased(PurchaseRequestModel purchaseRequest, int userId)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public AddFavorite(FavoriteRequestModel favoriteRequest)
-        //{
+        public Task PurchaseMovie(PurchaseRequestModel purchaseRequest, int userId)
+        {
+            throw new NotImplementedException();
+        }
 
-        //}
+        public Task RemoveFavorite(FavoriteRequestModel favoriteRequest)
+        {
+            throw new NotImplementedException();
+        }
 
-        //public RemoveFavorite(FavoriteRequestModel favoriteRequest)
-        //{
-
-        //}
-
-        //public FavoriteExists(int id, int movieId)
-        //{
-
-        //}
-
-        //public GetAllFavoritesForUser(int id)
-        //{
-
-        //}
-
-        //public AddMovieReview(ReviewRequestModel reviewRequest)
-        //{
-
-        //}
-
-        //public UpdateMovieReview(ReviewRequestModel reviewRequest)
-        //{
-
-        //}
-
-        //public DeleteMovieReview(int userId, int movieId)
-        //{
-
-        //}
-
-        //public GetAllReviewsByUser(int id)
-        //{
-
-        //}
+        public Task UpdateMovieReview(ReviewRequestModel reviewRequest)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

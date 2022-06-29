@@ -19,5 +19,6 @@ namespace ApplicationCore.Entities
         [MaxLength(2084)]
         public string? ProfilePath { get; set; }
         public string? TmdbUrl { get; set; }
+        public ICollection<MovieCast> CastMovies { get; set; }
     }
 }

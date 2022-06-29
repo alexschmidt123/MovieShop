@@ -16,6 +16,33 @@ namespace MovieShopAPI.Controllers
         }
 
         [HttpGet]
+        [Route("")]
+        public async Task<IActionResult> GetAllMovies()
+        {
+            var movies = await _movieService.GetAllMovies();
+            if (movies == null || !movies.Any())
+            {
+                // 404
+                return NotFound(new { errorMessage = "No Movies Found" });
+            }
+
+            return Ok(movies);
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<IActionResult> GetMovie(int id)
+        {
+            var movie = await _movieService.GetMovieDetails(id);
+            if (movie == null)
+            {
+                return NotFound(new { errorMessage = $"No Movie Found for id: {id}" });
+            }
+
+            return Ok(movie);
+        }
+
+        [HttpGet]
         [Route("top-grossing")]
         // Attribute Routing
         // MVC http://localhost/movies/GetTopGrossingMovies => Traditional/Convention based routing
@@ -40,17 +67,7 @@ namespace MovieShopAPI.Controllers
 
         }
 
-        [HttpGet]
-        [Route("{id:int}")]
-        public async Task<IActionResult> GetMovie(int id)
-        {
-            var movie = await _movieService.GetMovieDetails(id);
-            if (movie == null)
-            {
-                return NotFound(new { errorMessage = $"No Movie Found for id: {id}" });
-            }
 
-            return Ok(movie);
-        }
+       
     }
 }

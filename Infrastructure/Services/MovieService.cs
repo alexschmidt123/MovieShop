@@ -92,5 +92,19 @@ namespace Infrastructure.Services
 
             return movieCards;
         }
+
+        public async Task<List<MovieCardModel>> GetAllMovies()
+        {
+            var movies = await _movieRepository.GetAllMovies();
+
+            var movieCards = new List<MovieCardModel>();
+
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardModel { Id = movie.Id, PosterUrl = movie.PosterUrl, Title = movie.Title });
+            }
+
+            return movieCards;
+        }
     }
 }

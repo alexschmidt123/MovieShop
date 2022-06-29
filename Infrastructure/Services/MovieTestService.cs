@@ -15,6 +15,11 @@ namespace Infrastructure.Services
             throw new NotImplementedException();
         }
 
+        public Task<List<MovieCardModel>> GetAllMovies()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<PagedResultSetModel<MovieCardModel>> GetMovieByGenre(int genreId, int pageSize = 30, int pageNumber = 1)
         {
             throw new NotImplementedException();
