@@ -73,7 +73,8 @@ namespace MovieShopAPI.Controllers
                 new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
                 new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
                 new Claim("Country", "USA"),
-                new Claim("language", "english")
+                new Claim("language", "english"),
+                new Claim("isAdmin", (user.Id==49821) ? "true":"false")
             };
 
             var identityClaims = new ClaimsIdentity();

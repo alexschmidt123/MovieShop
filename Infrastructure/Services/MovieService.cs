@@ -55,6 +55,11 @@ namespace Infrastructure.Services
             {
                 movie.Casts.Add(new CastModel { Id = moviecast.CastId, Name = moviecast.Cast.Name, Gender = moviecast.Cast.Gender, ProfilePath = moviecast.Cast.ProfilePath, TmdbUrl = moviecast.Cast.TmdbUrl, Character = moviecast.Character });
             }
+            foreach (var review in movieDetails.Reviews)
+            {
+                movie.Reviews.Add(new ReviewModel { MovieId = review.MovieId, UserId = review.UserId, Rating = review.Rating, ReviewText = review.ReviewText });
+            }
+
 
             return movie;
         }
@@ -79,9 +84,23 @@ namespace Infrastructure.Services
         // method that return top movies to the caller
         // list of movies
 
-        public async Task<List<MovieCardModel>> GetTopGrossingMovies()
+        public async Task<List<MovieCardModel>> GetTopGrossingMovies(int pageNumber, int pageSize = 30)
         {
-            var movies = await _movieRepository.Get30HighestGrossingMovies();
+            var movies = await _movieRepository.Get30HighestGrossingMovies(pageNumber,pageSize);
+
+            var movieCards = new List<MovieCardModel>();
+
+            foreach (var movie in movies)
+            {
+                movieCards.Add(new MovieCardModel { Id = movie.Id, PosterUrl = movie.PosterUrl, Title = movie.Title });
+            }
+
+            return movieCards;
+        }
+
+        public async Task<List<MovieCardModel>> GetTopRatedMovies(int pageNumber, int pageSize =30)
+        {
+            var movies = await _movieRepository.Get30HighestRatedMovies(pageNumber, pageSize);
 
             var movieCards = new List<MovieCardModel>();
 
@@ -105,6 +124,19 @@ namespace Infrastructure.Services
             }
 
             return movieCards;
+        }
+
+        public  async Task<List<ReviewModel>> GetMovieReviewsById(int id)
+        {
+            var reviews = await _movieRepository.GetMovieReviewsById(id);
+            var reviewCards = new List<ReviewModel>();
+
+            foreach (var review in reviews)
+            {
+                reviewCards.Add(new ReviewModel { MovieId = review.MovieId, UserId=review.UserId,Rating=review.Rating,ReviewText=review.ReviewText });
+            }
+
+            return reviewCards;
         }
     }
 }

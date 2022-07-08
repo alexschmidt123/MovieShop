@@ -43,14 +43,26 @@ namespace MovieShopAPI.Controllers
         }
 
         [HttpGet]
-        [Route("top-grossing")]
+        [Route("top-rated/Page/{pageNum:int}")]
+        public async Task<IActionResult> GetTopRatedMovies(int pageNum, int pageSize = 30)
+        {
+            var movies = await _movieService.GetTopRatedMovies(pageNum,pageSize);
+            if (movies == null || !movies.Any())
+            {
+                return NotFound(new { errorMessage = "No Movies Found" });
+            }
+            return Ok(movies);
+        }
+
+        [HttpGet]
+        [Route("top-grossing/Page/{pageNum:int}")]
         // Attribute Routing
         // MVC http://localhost/movies/GetTopGrossingMovies => Traditional/Convention based routing
         // http://localhost/api/movies/top-grossing
-        public async Task<IActionResult> GetTopGrossingMovies()
+        public async Task<IActionResult> GetTopGrossingMovies(int pageNum, int pageSize = 30)
         {
             // call my service
-            var movies = await _movieService.GetTopGrossingMovies();
+            var movies = await _movieService.GetTopGrossingMovies(pageNum, pageSize);
             // return the movies information in JSON Format
             // ASP.NET Core automatically serializes C# objects to JSOn objects
             // System.Text.Json .NET 3
@@ -67,7 +79,22 @@ namespace MovieShopAPI.Controllers
 
         }
 
-
-       
+        [HttpGet]
+        [Route("{id:int}/reviews")]
+        public async Task<IActionResult> GetMovieReviewsById(int id)
+        {
+            var reviews = await _movieService.GetMovieDetails(id);
+            if (reviews == null)
+            {
+                return NotFound(new { errorMessage = $"No Movie Reviews Found for id: {id}" });
+            }
+            return Ok(reviews.Reviews);
+            //var reviews = await _movieService.GetMovieReviewsById(id);
+            //if (reviews == null || !reviews.Any())
+            //{
+            //    return NotFound(new { errorMessage = "No Movie Reviews Found" });
+            //}
+            //return Ok(reviews);
+        }
     }
 }

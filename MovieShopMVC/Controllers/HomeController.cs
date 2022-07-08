@@ -37,7 +37,7 @@ namespace MovieShopMVC.Controllers
             //var x = 9;
             //I/O bound operation, database over network, send the SQL and SQL will be excuted on DB get back with resu   lts
             //T1 will wait for this operation
-            var movies = await _movieService.GetTopGrossingMovies();
+            var movies = await _movieService.GetTopGrossingMovies(1,30);
             //method(int x, IMovieService service)
 
             //var movieService =new MovieService();

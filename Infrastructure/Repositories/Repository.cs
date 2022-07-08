@@ -36,8 +36,9 @@ namespace Infrastructure.Repositories
             return await _dbContext.Set<T>().ToListAsync();
         }
 
-        public virtual Task<T> GetById(int id)
+        public virtual async Task<T> GetById(int id)
         {
+            //return await _dbContext.Set<T>().FirstOrDefaultAsync(T=>T.Id=id);
             throw new NotImplementedException();
         }
 

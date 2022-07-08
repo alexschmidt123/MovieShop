@@ -23,12 +23,17 @@ builder.Services.AddSwaggerGen();
 // dependency Injection4
 builder.Services.AddScoped<IMovieService, MovieService>();
 builder.Services.AddScoped<IMovieRepository, MovieRepository>();
-builder.Services.AddScoped<IRepository<Genre>, Repository<Genre>>();
 builder.Services.AddScoped<IGenreService, GenreService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICastService, CastService>();
 builder.Services.AddScoped<ICastRepository, CastRepository>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IRepository<Movie>, Repository<Movie>>();
+builder.Services.AddScoped<IRepository<Genre>, Repository<Genre>>();
+builder.Services.AddScoped<IGenreRepository, GenreRepository>();
+
 
 // Inject the connection string into DbContext options constructor
 // get the connection string from app settings
@@ -63,6 +68,10 @@ if (app.Environment.IsDevelopment())
 app.UseMovieShopExceptionMiddleware();
 app.UseHttpsRedirection();
 //middleware
+app.UseCors(policy =>
+{
+    policy.WithOrigins(builder.Configuration["AngularURL"]).AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+});
 
 app.UseAuthentication();
 app.UseAuthorization();
