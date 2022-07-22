@@ -12,5 +12,6 @@ namespace ApplicationCore.Contracts.Services
         //all the business functionality methdos pertaining to Movies
         //Movie
         Task<bool> AddMovie(MovieCardModel movieCardModel);
+        //Task<MovieDetailsModel> UpdateMovie(MovieDetailsModel movieDetailsModel, MovieCardModel movieCardModel);
     }
 }

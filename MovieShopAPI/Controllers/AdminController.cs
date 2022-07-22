@@ -10,10 +10,12 @@ namespace MovieShopAPI.Controllers
     public class AdminController : ControllerBase
     {
         private readonly IAdminService _adminService;
+        private readonly IMovieService _movieService;
 
-        public AdminController(IAdminService adminService)
+        public AdminController(IAdminService adminService, IMovieService movieService)
         {
             _adminService = adminService;
+           _movieService = movieService;
         }
 
         [HttpPost]
@@ -24,5 +26,13 @@ namespace MovieShopAPI.Controllers
             return Ok(addedMovie);
         }
 
+        //[HttpPut]
+        //[Route("UpdateMovie/{id:int}")]
+        //public async Task<IActionResult> UpdateMovie(int id, MovieCardModel movieCardModel)
+        //{
+        //    var movie = await _movieService.GetMovieDetails(id);
+        //    var updatedMovie = await _adminService.UpdateMovie(movie, movieCardModel);
+        //    return Ok(updatedMovie);
+        //}
     }
 }

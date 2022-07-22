@@ -13,5 +13,6 @@ namespace ApplicationCore.Contracts.Services
         //Movie
         Task<bool> RegisterUser(UserRegisterModel model);
         Task<UserModel> ValidateUser(string email, string password);
+        Task<bool> CheckEmail(string email);
     }
 }

@@ -98,5 +98,17 @@ namespace Infrastructure.Services
            256 / 8));
             return hashed;
         }
+
+        public async Task<bool> CheckEmail(string email)
+        {
+            var user = await _userRepository.GetUserByEmail(email);
+            if (user == null)
+            {
+                return false;
+            } else
+            {
+                return true;
+            }
+        }
     }
 }

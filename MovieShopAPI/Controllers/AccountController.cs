@@ -62,6 +62,16 @@ namespace MovieShopAPI.Controllers
 
         }
 
+        [HttpGet]
+        [Route("check-email")]
+        public async Task<IActionResult> CheckEmail(string email)
+        {
+            var isExist = await _accountService.CheckEmail(email);
+            return Ok(isExist);
+        }
+
+
+
         private string CreateJwtToken(UserModel user)
         {
             // create the claims 

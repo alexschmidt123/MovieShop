@@ -30,5 +30,14 @@ namespace Infrastructure.Services
             }
             return false;
         }
+
+        //public Task<MovieDetailsModel> UpdateMovie(MovieDetailsModel movieDetailsModel, MovieCardModel movieCardModel)
+        //{
+
+            //movieDetailsModel.Title = movieCardModel.Title;
+            //movieDetailsModel.PosterUrl = movieCardModel.PosterUrl;
+
+            //return movieDetailsModel;
+        //}
     }
 }
